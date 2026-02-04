@@ -7,5 +7,6 @@ fi
 file ~/simple_templates/$1
 if [ -d "~/simple_templates/$1" ]; then
   echo "$1 does exist."
+  return -2
 fi
 cp -r ~/simple_templates/$1 ./$2
