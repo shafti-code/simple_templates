@@ -1,0 +1,11 @@
+#/!bin/bash
+if [[ $# != 2 ]];then
+    echo "this script takes precisely 2 arguments"
+    echo "template [[template]] [[name]]"
+    return -1
+fi
+file ~/simple_templates/$1
+if [ -d "~/simple_templates/$1" ]; then
+  echo "$1 does exist."
+fi
+cp -r ~/simple_templates/$1 ./$2
